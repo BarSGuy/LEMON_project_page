@@ -1,0 +1,196 @@
+/* Results use a separate stylesheet so local previews fetch the table styles. */
+.results-container {
+  width: 100%;
+  max-width: 1280px !important;
+  padding-inline: 0;
+}
+.results-intro { margin-bottom: 1.5rem; }
+.results-setup { max-width: 1000px; margin: 0 auto 2rem; }
+.results-discussion { margin-top: 2rem; }
+
+.results-legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  margin-bottom: 1.1rem;
+  color: #637083;
+  font-size: 0.85rem;
+}
+.results-metric {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #e1e7ee;
+  border-radius: 6px;
+  background: #f7f9fc;
+  color: #344154;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.results-tables {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+.results-table-block {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dfe5ed;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 3px 12px rgb(31 41 55 / 4%);
+}
+.results-table-scroll {
+  position: relative;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-color: #bbc6d5 #f4f6fa;
+}
+.results-table-scroll:focus-visible { outline: 3px solid #3273dc; outline-offset: -3px; }
+.results-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #253245;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1.45;
+}
+.results-table caption {
+  min-height: 118px;
+  padding: 1.15rem 1.2rem;
+  caption-side: top;
+  text-align: left;
+}
+.table-number {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #6b7789;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+.table-title {
+  display: block;
+  color: #243044;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+.table-subtitle {
+  display: block;
+  margin-top: 0.35rem;
+  color: #687487;
+  font-size: 12px;
+  font-weight: 400;
+}
+.results-table .model-column { width: 30%; }
+.hallucination-table .model-column { width: 24%; }
+.results-table th,
+.results-table td { padding: 0.78rem 0.35rem; text-align: center; vertical-align: middle; }
+.results-table td:not([align]),
+.results-table th[scope="col"],
+.results-table th[scope="colgroup"] { text-align: center; }
+.results-table thead th { font-weight: 600; }
+.results-table thead tr:first-child th {
+  padding-block: 0.7rem;
+  border-block: 1px solid #e5eaf1;
+  background: #f3f6fa;
+  color: #647184;
+  font-size: 11px;
+  letter-spacing: 0.025em;
+}
+.results-table thead tr:first-child > th:first-child {
+  padding-left: 1.1rem;
+  color: #42516a;
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.results-table thead tr:first-child .lemon-group {
+  border-left: 1px solid #eadca7;
+  background: #fff2c4;
+  color: #7d6100;
+}
+.results-table thead tr:nth-child(2) th {
+  height: 62px;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px solid #e1e7ef;
+  background: #f8fafc;
+  color: #4b5870;
+  font-size: 11.5px;
+}
+.results-table thead tr:nth-child(2) th:nth-last-child(-n+2) {
+  background: #fff9e4;
+  color: #7d6100;
+}
+.results-table thead .katex { font-size: 1.2em; }
+.column-subtitle { display: block; margin-top: 0.15rem; font-size: 10px; font-weight: 500; }
+.results-table tbody th,
+.results-table tfoot th { padding-left: 1.1rem; text-align: left; font-size: 13px; }
+.results-table tbody th { color: #43516a; font-weight: 500; overflow-wrap: normal; }
+.results-table tbody tr:nth-child(even) { background: #fafbfd; }
+.results-table tbody tr + tr > * { border-top: 1px solid #edf0f5; }
+.results-table tbody td:nth-last-child(-n+2) { background: #fffdf3; }
+.results-table tbody tr:nth-child(even) td:nth-last-child(-n+2) { background: #fff9e9; }
+.results-table thead tr:nth-child(2) th:nth-last-child(2),
+.results-table tbody td:nth-last-child(2),
+.results-table tfoot td:nth-last-child(2) { border-left: 1px solid #ede3bd; }
+.results-table strong { color: #1e293b; font-weight: 700; }
+.second-best { text-decoration: underline; text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+.results-table tfoot > tr > * {
+  padding-block: 0.9rem;
+  border-top: 2px solid #d5deea;
+  background: #eef3f9;
+  font-weight: 400;
+}
+.results-table tfoot th { font-weight: 600; }
+.results-table tfoot td:nth-last-child(-n+2) { background: #fff0b7; }
+.shard-count { display: block; margin-top: 2px; font-size: 10px; font-weight: 400; color: #718096; }
+.table-note {
+  margin: 0;
+  padding: 0.9rem 1.15rem 1rem;
+  border-top: 1px solid #e6ebf2;
+  color: #687487;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.results-scroll-hint { display: none; }
+
+@media (max-width: 1199px) and (min-width: 981px) {
+  .results-tables { gap: 1rem; }
+  .results-table { font-size: 13px; }
+  .results-table th, .results-table td { padding-inline: 0.25rem; }
+  .results-table tbody th, .results-table tfoot th { padding-left: 0.8rem; font-size: 12px; }
+  .results-table thead tr:first-child > th:first-child { padding-left: 0.8rem; }
+  .table-title { font-size: 18px; }
+}
+@media (max-width: 980px) {
+  .results-container { max-width: 928px !important; }
+  .results-tables { grid-template-columns: minmax(0, 1fr); }
+  .results-table { font-size: 14px; }
+  .results-table .model-column { width: 25%; }
+}
+@media (max-width: 640px) {
+  .results-table caption { min-height: 0; padding: 1rem; }
+  .results-table caption > span {
+    position: sticky;
+    left: 1rem;
+    max-width: calc(100vw - 56px);
+  }
+  .hallucination-table { min-width: 560px; }
+  .jailbreak-table { min-width: 450px; }
+  .table-title { font-size: 19px; }
+  .table-note { padding-inline: 1rem; }
+  .results-legend { font-size: 12px; }
+  .results-scroll-hint { display: block; flex-basis: 100%; color: #637083; }
+  .results-table thead tr:first-child > th:first-child,
+  .results-table tbody th,
+  .results-table tfoot th { position: sticky; left: 0; z-index: 2; }
+  .results-table tbody th { background: white; }
+  .results-table tbody tr:nth-child(even) th { background: #fafbfd; }
+}
